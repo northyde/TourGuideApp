@@ -40,7 +40,7 @@ public class PlaygroundsFragment extends Fragment {
         places.add(new Place("Playground Saulsiek", "Bunerbergweg", "Blomberg", R.drawable.saulsiek));
         places.add(new Place("Playground Grundschule Istrup", "Detmolder Straße", "Istrup", R.drawable.grundschule_istrup));
         places.add(new Place("Playground Kita Zauberblume", "Neue Torstraße 114a", "Blomberg", R.drawable.kita_zauberblume));
-        places.add(new Place("Playground Grundschule Grußenmarpe", "Turnhallenstraße", "Großenmarpe", R.drawable.grundschule_grossenmarpe));
+        places.add(new Place("Playground Grundschule Großenmarpe", "Turnhallenstraße", "Großenmarpe", R.drawable.grundschule_grossenmarpe));
         places.add(new Place("Playground Gymnasium", "Ostring 14 ", "Blomberg", R.drawable.gymnasium));
         places.add(new Place("Playground Großenmarpe", "Am Pielberg", "Großenmarpe", R.drawable.grossenmarpe));
         places.add(new Place("Playground Grundschule Am Weinberg", "Schulstraße", "Blomberg", R.drawable.grundschule_am_weinberg));

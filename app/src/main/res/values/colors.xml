@@ -4,9 +4,9 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#e1d642</color>
     <color name="tab_unselected">#504541</color>
-    <color name="primary_color">#fc815e</color>
-    <color name="category_OtherSportsPlaces">#f1ae67</color>
-    <color name="category_Playgrounds">#63da8e</color>
-    <color name="category_PoolsAndGyms">#7dcbe7</color>
-    <color name="category_SportsFields">#756bd4</color>
+    <color name="primary_color">#edb8a9</color>
+    <color name="category_OtherSportsPlaces">#e9c197</color>
+    <color name="category_Playgrounds">#a4e6bb</color>
+    <color name="category_PoolsAndGyms">#9ed3e6</color>
+    <color name="category_SportsFields">#b5b0e6</color>
 </resources>
