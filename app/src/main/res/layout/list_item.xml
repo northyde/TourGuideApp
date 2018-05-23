@@ -20,6 +20,7 @@
         android:layout_height="@dimen/list_item_height"
         android:layout_weight="3"
         android:orientation="vertical"
+        android:paddingRight="@dimen/list_item_padding_right"
         android:paddingLeft="@dimen/list_item_padding_left">
 
         <TextView

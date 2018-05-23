@@ -1,13 +1,10 @@
 package com.example.android.blombergfreetimeguide;
 
-import android.app.Activity;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -26,8 +23,8 @@ public class PlaygroundsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.places_list, container, false);
-
-        final ArrayList<Place> places = new ArrayList<Place>();
+        // Content for the list
+        final ArrayList<Place> places = new ArrayList<>();
         places.add(new Place("Playground Wöhren", "Lindenstraße", "Wöhren", R.drawable.woehren));
         places.add(new Place("Playground ehemalige Grundschule am Paradies", "Hölstenhöfener Straße 4", "Blomberg", R.drawable.ehemalige_grundschule_am_paradies));
         places.add(new Place("Playground Wellentrup", "Alte Ortsstraße", "Wellentrup", R.drawable.wellentrup));
@@ -55,18 +52,9 @@ public class PlaygroundsFragment extends Fragment {
         places.add(new Place("Playground Altendonop", "Zum Kespohl", "Altendonop", R.drawable.altendonop));
 
         PlacesAdapter adapter = new PlacesAdapter(getActivity(), places, R.color.category_Playgrounds);
-
-        listView = (ListView) rootView.findViewById(R.id.list);
+        // Find list and apply custom adapter
+        listView = rootView.findViewById(R.id.list);
         listView.setAdapter(adapter);
-        // Makes an item in a list clickable
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-                Place currentPlace = (Place) listView.getItemAtPosition(position);
-            }
-        });
 
         return rootView;
     }

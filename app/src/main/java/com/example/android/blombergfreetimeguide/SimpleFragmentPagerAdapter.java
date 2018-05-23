@@ -1,6 +1,5 @@
 package com.example.android.blombergfreetimeguide;
 
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
@@ -13,7 +12,7 @@ public class SimpleFragmentPagerAdapter extends FragmentPagerAdapter {
             super(fm);
         }
 
-
+    // Determine Fragments for Tabs
     @Override
     public android.support.v4.app.Fragment getItem(int position) {
         if (position == 0) {
@@ -32,7 +31,8 @@ public class SimpleFragmentPagerAdapter extends FragmentPagerAdapter {
         return 4;
     }
 
-      @Override
+    // Determine Tab titles
+    @Override
     public CharSequence getPageTitle(int position) {
         if (position == 0) {
             return "Play-grounds";

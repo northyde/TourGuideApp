@@ -1,15 +1,11 @@
 package com.example.android.blombergfreetimeguide;
 
-import android.app.Activity;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ListView;
-
 import java.util.ArrayList;
 
 /**
@@ -21,13 +17,12 @@ public class OtherSportsPlacesFragment extends Fragment {
 
     public OtherSportsPlacesFragment() {
     }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.places_list, container, false);
-
-        final ArrayList<Place> places = new ArrayList<Place>();
+        //Content for the list
+        final ArrayList<Place> places = new ArrayList<>();
         places.add(new Place("Indoor Riding Arena", "Alte Chaussee 8", "Donop"));
         places.add(new Place("Golf", "Huxoll 14", "Cappel"));
         places.add(new Place("Minigolf", "Walkenmühle 12", "Blomberg"));
@@ -42,17 +37,9 @@ public class OtherSportsPlacesFragment extends Fragment {
         places.add(new Place("Tennis Court", "Wesselweg", "Blomberg"));
 
         PlacesAdapter adapter = new PlacesAdapter(getActivity(), places, R.color.category_OtherSportsPlaces);
-
-        listView = (ListView) rootView.findViewById(R.id.list);
+        // Find list and apply custom adapter
+        listView = rootView.findViewById(R.id.list);
         listView.setAdapter(adapter);
-        // Makes an item in a list clickable
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Place currentPlace = (Place) listView.getItemAtPosition(position);
-            }
-        });
 
         return rootView;
     }
